@@ -1,0 +1,42 @@
+body {
+    font-size: larger;
+    margin-left: 2vw;
+}
+
+.down {
+    a {
+        text-decoration: none;
+    }
+}
+
+.info {
+    table {
+        border-collapse: collapse;
+    }
+
+    .actions {
+        display: flex;
+
+        input[type="submit"] {
+            font-size: larger;
+            margin-right: 10px;
+        }
+    }
+
+    .name {
+        font-weight: bold;
+        padding-right: 10px;
+    }
+
+    .service-binding-info {
+        text-align: left;
+
+        td, th {
+            padding-right: 10px;
+        }
+
+        td.name {
+            font-weight: normal;
+        }
+    }
+}

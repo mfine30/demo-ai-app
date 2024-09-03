@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <title>Demo AI App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" media="all" href="/style.css"/>
+</head>
+
+<body class="info">
+
+<h1>Demo AI App</h1>
+
+<h2>Prompt and Answer</h2>
+
+<h3>Prompt</h3>
+<p class="value" th:text="${prompt}">Prompt</p>
+ 
+<h3>Answer</h3>
+<p class="value" th:text="${answer}">Answer></p>
+
+<img src="../static/corgi.jpg" th:src="@{corgi.jpg}"/>
+
+
+</body>
+</html>
