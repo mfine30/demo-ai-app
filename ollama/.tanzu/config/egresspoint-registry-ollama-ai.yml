@@ -1,0 +1,12 @@
+apiVersion: networking.tanzu.vmware.com/v1alpha1
+kind: EgressPoint
+metadata:
+  name: registry-ollama-ai
+spec:
+  targets:
+  - hosts:
+    - dd20bb891979d25aebc8bec07b2b3bbc.r2.cloudflarestorage.com
+    - registry.ollama.ai
+    port:
+      number: 443
+      protocol: HTTPS

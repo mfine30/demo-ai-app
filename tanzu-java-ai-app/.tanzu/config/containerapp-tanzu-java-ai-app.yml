@@ -2,16 +2,11 @@ apiVersion: apps.tanzu.vmware.com/v1
 kind: ContainerApp
 metadata:
   creationTimestamp: null
-  name: ollama
+  name: tanzu-java-ai-app
 spec:
   build:
     buildpacks: {}
     path: ../..
-  nonSecretEnv:
-  - name: OLLAMA_HOST
-    value: 0.0.0.0
-  - name: OLLAMA_TMPDIR
-    value: /tmp
   ports:
   - name: main
-    port: 11434
+    port: 8080
