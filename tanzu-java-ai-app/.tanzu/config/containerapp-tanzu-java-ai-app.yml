@@ -6,7 +6,16 @@ metadata:
 spec:
   build:
     buildpacks: {}
+    nonSecretEnv:
+    - name: BP_JVM_VERSION
+      value: "21"
     path: ../..
+  nonSecretEnv:
+  - name: JAVA_TOOL_OPTIONS
+    value: -XX:MaxDirectMemorySize=128M
   ports:
   - name: main
     port: 8080
+  resources:
+    cpu: 500m
+    memory: 640Mi
