@@ -1,0 +1,18 @@
+body {
+    font-size: larger;
+    margin-left: 2vw;
+}
+
+img {
+    max-width: 500px;
+    max-height: 300px;
+}
+
+input {
+    font-size: larger;
+}
+
+textarea {
+    font-size: larger;
+    width: 500px;
+}

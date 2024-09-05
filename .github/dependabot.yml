@@ -1,0 +1,9 @@
+version: 2
+updates:
+
+- package-ecosystem: gradle
+  directory: tanzu-java-ai-app/
+  schedule:
+    interval: daily
+  labels:
+  - dependencies

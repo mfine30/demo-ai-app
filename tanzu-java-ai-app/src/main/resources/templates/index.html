@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <title>Demo AI App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" media="all" href="/style.css"/>
+</head>
+
+<body>
+
+<h1>Tanzu AI Application</h1>
+
+<div id="response" th:if="${response}" th:object="${response}">
+    <h2>Prompt</h2>
+    <p th:text="*{prompt.text}"></p>
+    <div th:if="*{prompt.image.isPresent()}">
+        <h2>Image</h2>
+        <img th:alt="*{answer}" th:src="*{prompt.encodedImage()}">
+    </div>
+    <h2>Answer</h2>
+    <p th:text="*{answer}"></p>
+    <hr/>
+</div>
+
+<div id="prompt">
+    <form enctype="multipart/form-data" method="post" th:action="@{/}">
+        <h2>Prompt</h2>
+        <p><textarea name="prompt.text">What do you see in this picture?</textarea></p>
+        <h2>Image</h2>
+        <p><input accept="image/*" name="prompt.image" type="file"></p>
+        <p><input type="submit"/></p>
+    </form>
+</div>
+
+</body>
+</html>

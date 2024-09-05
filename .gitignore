@@ -1,5 +1,5 @@
 HELP.md
-.gradle
+tanzu-java-ai-app/.gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/

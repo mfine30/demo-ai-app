@@ -1,0 +1,33 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.3'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.vmware.tanzu'
+version = '1.0.0'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+jar {
+	enabled = false
+}
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+}
+
+dependencies {
+	implementation(platform('org.springframework.ai:spring-ai-bom:1.0.0-M2'))
+
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springframework.ai:spring-ai-ollama-spring-boot-starter'
+	implementation 'org.springframework.cloud:spring-cloud-bindings:2.0.3'
+}
