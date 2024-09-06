@@ -14,5 +14,7 @@ spec:
 
   values:
     ollama:
+      gpu:
+        enabled: true
       models:
       - llava
