@@ -4,6 +4,10 @@ metadata:
   creationTimestamp: null
   name: tanzu-java-ai-app
 spec:
+  acceptedServiceBindings:
+  - name: ollama
+    types:
+    - ollama
   build:
     buildpacks: {}
     nonSecretEnv:
