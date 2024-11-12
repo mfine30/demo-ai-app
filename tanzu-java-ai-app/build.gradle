@@ -31,5 +31,5 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	implementation 'org.springframework.ai:spring-ai-ollama-spring-boot-starter'
 	implementation 'org.springframework.ai:spring-ai-spring-cloud-bindings'
-	implementation 'org.springframework.cloud:spring-cloud-bindings:2.0.3'
+	implementation 'org.springframework.cloud:spring-cloud-bindings:2.0.4'
 }
